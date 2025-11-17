@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import SeleniumFrameworkDesign.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandAloneTest {
+public class ApplyOnNaukri {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -26,13 +26,13 @@ public class StandAloneTest {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://www.naukri.com/");
+		
 		LandingPage landingPage = new LandingPage(driver);
+		landingPage.goToNaukri();
+		landingPage.LoggingAppication("sampadasdesai@gmail.com", "Sampada@4");
+		
 		driver.manage().window().maximize();
-		driver.findElement(By.id("login_Layer")).click();
-		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']")).sendKeys("sampadasdesai@gmail.com");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Sampada@4");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
 		// after login
 		driver.findElement(By.className("nI-gNb-icon-img")).click();
 		
