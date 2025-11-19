@@ -14,8 +14,10 @@ public class LandingPage extends AbstractComponents {
 	
 	public LandingPage(WebDriver driver)
 	{
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
 	}
 	
 //	WebElement username = driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']"));

@@ -15,13 +15,19 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import SeleniumFrameworkDesign.PageObjects.JobSearch;
 import SeleniumFrameworkDesign.PageObjects.LandingPage;
+import SeleniumFrameworkDesign.PageObjects.ProfileEditPage;
+import SeleniumFrameworkDesign.PageObjects.UpdateProfile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ApplyOnNaukri {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		String[] recruiterAction= new String[2];
+		String[] searchProfile = new String[2];
+		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
@@ -33,70 +39,25 @@ public class ApplyOnNaukri {
 		
 		driver.manage().window().maximize();
 		
-		// after login
-		driver.findElement(By.className("nI-gNb-icon-img")).click();
+		UpdateProfile updateProfile = new UpdateProfile(driver);
+		updateProfile.goToPerformancePage();
+		recruiterAction = updateProfile.recruiterActionCount();
+//		System.out.println(Arrays.toString(recruiterAction));
+		searchProfile = updateProfile.searchAppearanceCount();
+//		System.out.println(Arrays.toString(searchProfile));
+		updateProfile.closePerformancePage();
 		
-		String searchApp = "";
-		String RecruiterActn="";
+		ProfileEditPage editProfile = new ProfileEditPage(driver);
+		editProfile.userProfilePage();
+		editProfile.editProfile();
+		editProfile.resumeHeadlineEdit();
+		editProfile.saveButton();
+
+		JobSearch jobSearchPage = new JobSearch(driver);
+		jobSearchPage.goToRecommendedJob();
+		jobSearchPage.goToJobSearch("Manual test manager", "Pune");
 		
-		List<WebElement> labels = driver.findElements(By.cssSelector(".nI-gNb-de__perf-card"));
-		
-		labels.stream().filter(label->label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Search Appearances"));
-		
-		for(WebElement label:labels) {
-			
-			if (label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Search Appearances"))
-			{
-				searchApp = label.findElement(By.cssSelector(".nI-gNb-de__perf-card-count")).getText();
-			}
-			else if(label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Recruiter Actions"))
-			{
-				RecruiterActn = label.findElement(By.cssSelector(".nI-gNb-de__perf-card-count")).getText();
-			}
-			}
-		
-//		System.out.println(searchApp);
-//		System.out.println(RecruiterActn);
-	
-		
-		//closing the pop-up
-		driver.findElement(By.cssSelector(".ni-gnb-icn-cross-drawer")).click();
-		
-		//edit details on profile page
-		driver.findElement(By.className("view-profile-wrapper")).click();
-		
-		WebElement resumeHL = driver.findElement(By.cssSelector(".resumeHeadline"));
-		resumeHL.findElement(By.cssSelector(".edit")).click();
-		
-		//resume headline edit page
-		WebElement headliner = driver.findElement(By.id("resumeHeadline"));
-		headliner.clear();
-		headliner.sendKeys("Experienced QA Professional | Expertise in System & Automation Testing | Strong Analytical, Communication, and Project Management Skills");
-		
-		driver.findElement(By.xpath("//button[text()='Save']")).click();
-		
-		
-		//jobs search
-		
-		driver.get("https://www.naukri.com/mnjuser/homepage");
-		WebElement jobSearch = driver.findElement(By.cssSelector(".nI-gNb-custom-Jobs"));
-		WebElement recommendedJob = driver.findElement(By.xpath("//div[text()='Recommended jobs']"));
-		
-		Actions action = new Actions(driver);
-		action.moveToElement(jobSearch).build().perform();
-		recommendedJob.click();
-		
-//		driver.findElement(By.xpath("a[text()='Recommended jobs']")).click();
-		
-		//Jobsearch from search option
-		
-		WebElement jobsearchEditor = driver.findElement(By.cssSelector(".nI-gNb-sb__placeholder"));
-		
-		jobsearchEditor.click();
-		driver.findElement(By.cssSelector(".suggestor-input")).sendKeys("Automation testing");
-		driver.findElement(By.xpath("//input[@placeholder='Enter location']")).sendKeys("Pune");
-		driver.findElement(By.xpath("//span[text()='Search']")).click();
-		
+				
 //		filters for job search
 		
 		for(int i = 0; i < driver.findElements(By.cssSelector(".styles_filterContainer__4aQaD")).size(); i++)

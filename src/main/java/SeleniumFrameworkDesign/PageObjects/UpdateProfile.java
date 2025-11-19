@@ -1,5 +1,7 @@
 package SeleniumFrameworkDesign.PageObjects;
 
+import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,6 +18,7 @@ public class UpdateProfile extends AbstractComponents {
 	
 	public UpdateProfile(WebDriver driver)
 	{
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -25,43 +28,70 @@ public class UpdateProfile extends AbstractComponents {
 	@FindBy(className="nI-gNb-icon-img")
 	WebElement profilePerformance;
 	
+	@FindBy(css=".nI-gNb-de__perf-card")
+	List<WebElement> labels;
+	
+	@FindBy(className="cross-icon")
+	WebElement closeButton;
+	
+	@FindBy(css=".ni-gnb-icn-cross-drawer")
+	WebElement closePerformancePageDrawer;
+	
+	By profilePerform = By.cssSelector(".nI-gNb-icon-img");
+	By pageLabel = By.cssSelector(".nI-gNb-de__perf-card-label");
+	By count = By.cssSelector(".nI-gNb-de__perf-card-count");
+	
+	
 	public void goToPerformancePage()
 	{
+		waitForByElement(profilePerform);
 		profilePerformance.click();
 	}
 	
-	
-	public void searchCountCheck()
+	public void closeNaukriProPopup()
 	{
-		
-		
-		String searchApp = "";
-		String RecruiterActn="";
-		
-		List<WebElement> labels = driver.findElements(By.cssSelector(".nI-gNb-de__perf-card"));
-		
-		labels.stream().filter(label->label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Search Appearances"));
+		closeButton.click();
+	}
+	
+	public void closePerformancePage()
+	{
+		closePerformancePageDrawer.click();
+	}
+	
+	public String[] recruiterActionCount() throws InterruptedException
+	{
+		sleepDuration(1000);
+		String[] recruiterActn= new String[2];
 		
 		for(WebElement label:labels) {
 			
-			if (label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Search Appearances"))
+			if(label.findElement(pageLabel).getText().equals("Recruiter Actions"))
 			{
-				searchApp = label.findElement(By.cssSelector(".nI-gNb-de__perf-card-count")).getText();
-			}
-			else if(label.findElement(By.cssSelector(".nI-gNb-de__perf-card-label")).getText().equals("Recruiter Actions"))
-			{
-				RecruiterActn = label.findElement(By.cssSelector(".nI-gNb-de__perf-card-count")).getText();
+				recruiterActn[0] = label.findElement(count).getText();
 			}
 			}
 		
-//		System.out.println(searchApp);
-//		System.out.println(RecruiterActn);
-	
-		
-		//closing the pop-up
-		driver.findElement(By.cssSelector(".ni-gnb-icn-cross-drawer")).click();
+		System.out.println(recruiterActn[0]);
+		recruiterActn[1]= LocalDate.now().toString(); 
+		System.out.println(recruiterActn[1]);
+		return recruiterActn;		
 	}
 	
-
+	public String[] searchAppearanceCount()
+	{
+		String[] searchApp= new String[2];
+		
+		for(WebElement label:labels) {
+		if(label.findElement(pageLabel).getText().equals("Search Appearances"))
+		{
+			searchApp[0] = label.findElement(count).getText();
+		}
+		}
+		System.out.println(searchApp[0]);
+		
+		searchApp[1]= LocalDate.now().toString(); 
+		System.out.println(searchApp[1]);
+		return searchApp;
+	}
 
 }
