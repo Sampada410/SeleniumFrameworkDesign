@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+import SeleniumFramework.AbstractComponents.AbstractComponents;
+
+public class LandingPage extends AbstractComponents {
 	
 	WebDriver driver;
 	
