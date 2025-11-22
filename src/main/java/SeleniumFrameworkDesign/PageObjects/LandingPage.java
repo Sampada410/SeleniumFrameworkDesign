@@ -1,6 +1,5 @@
 package SeleniumFrameworkDesign.PageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,15 +19,13 @@ public class LandingPage extends AbstractComponents {
 		
 	}
 	
-//	WebElement username = driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']"));
-
 	//page factory
 	
 	@FindBy(xpath="//input[@placeholder='Enter your active Email ID / Username']")
-	WebElement username;
+	WebElement usernameNK;
 	
 	@FindBy(xpath="//input[@type='password']")
-	WebElement passwordEle;
+	WebElement passwordNK;
 	
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement submit;
@@ -39,22 +36,39 @@ public class LandingPage extends AbstractComponents {
 	@FindBy(className="ml-3")
 	WebElement loginLinkedin;
 	
+	@FindBy(id="username")
+	WebElement usernameLN;
+	
+	@FindBy(id="password")
+	WebElement passwordLN;
+	
 	public void LoggingAppication(String email, String password)
 	{
-		username.sendKeys(email);
-		passwordEle.sendKeys(password);
+		usernameNK.sendKeys(email);
+		passwordNK.sendKeys(password);
 		submit.click();
 	}
 	
 	public void goToNaukri()
 	{
 		driver.get("https://www.naukri.com/");
+		driver.manage().window().maximize();
 		loginNaukri.click();
 	}
 	
 	public void goToLinkedin()
 	{
 		driver.get("https://www.linkedin.com/");
+		driver.manage().window().maximize();
 		loginLinkedin.click();
+		
+	}
+	
+	public void LoggingAppicationLN(String email, String password) throws InterruptedException
+	{
+		usernameLN.sendKeys(email);
+		passwordLN.sendKeys(password);
+		submit.click();
+		Thread.sleep(30000);
 	}
 }

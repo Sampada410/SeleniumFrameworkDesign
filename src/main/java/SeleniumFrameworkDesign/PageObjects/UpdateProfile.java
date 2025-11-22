@@ -71,9 +71,8 @@ public class UpdateProfile extends AbstractComponents {
 			}
 			}
 		
-		System.out.println(recruiterActn[0]);
 		recruiterActn[1]= LocalDate.now().toString(); 
-		System.out.println(recruiterActn[1]);
+		System.out.println(Arrays.toString(recruiterActn));
 		return recruiterActn;		
 	}
 	
@@ -87,10 +86,8 @@ public class UpdateProfile extends AbstractComponents {
 			searchApp[0] = label.findElement(count).getText();
 		}
 		}
-		System.out.println(searchApp[0]);
-		
 		searchApp[1]= LocalDate.now().toString(); 
-		System.out.println(searchApp[1]);
+		System.out.println(Arrays.toString(searchApp));
 		return searchApp;
 	}
 
