@@ -69,6 +69,6 @@ public class LandingPage extends AbstractComponents {
 		usernameLN.sendKeys(email);
 		passwordLN.sendKeys(password);
 		submit.click();
-		Thread.sleep(30000);
+//		Thread.sleep(30000);
 	}
 }

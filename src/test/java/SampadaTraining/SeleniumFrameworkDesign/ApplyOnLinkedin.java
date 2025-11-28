@@ -22,7 +22,7 @@ public class ApplyOnLinkedin {
 		
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goToLinkedin();
-		landingPage.LoggingAppicationLN("sampadasdesai@gmail.com", "Sampada@410");
+		landingPage.LoggingAppicationLN("sampadajadhav0410@gmail.com", "Sampada@410");
 		
 		
 		//job search

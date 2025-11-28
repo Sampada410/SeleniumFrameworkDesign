@@ -38,6 +38,9 @@ public class JobSearchLinkedin extends AbstractComponents {
 	@FindBy(xpath = "//label[contains(.,'Easy Apply')]/input")
 	WebElement easyApplyText;
 	
+	@FindBy(xpath="//button[text()='Search']")
+	WebElement searchButton;
+	
 	public void goToJobpage() {
 		jobsLink.click();
 	}
@@ -46,6 +49,7 @@ public class JobSearchLinkedin extends AbstractComponents {
 		
 		jobTitle.sendKeys(jobKeyword);
 		location.sendKeys(jobLocation, Keys.ENTER);
+		searchButton.click();
 	}
 	
 	public void showAllFilters() {
