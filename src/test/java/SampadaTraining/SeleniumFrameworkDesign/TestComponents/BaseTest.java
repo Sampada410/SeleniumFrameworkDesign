@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 
 import SeleniumFrameworkDesign.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -46,6 +47,7 @@ public class BaseTest {
 		
 	}
 	
+	@BeforeTest
 	public void launchingApplication() throws IOException, InterruptedException {
 		driver = InitializeDriver();
 		Properties prop = new Properties();
@@ -67,5 +69,11 @@ public class BaseTest {
 		
 		
 		
+	}
+	
+	@AfterTest
+	public void TearDown()
+	{
+		driver.close();
 	}
 }

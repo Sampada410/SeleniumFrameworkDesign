@@ -17,7 +17,7 @@ public class ApplyOnNaukri extends BaseTest {
 		String[] recruiterAction= new String[2];
 		String[] searchProfile = new String[2];
 		
-		launchingApplication();
+//		launchingApplication();
 		//Right side profile pop-up page 
 		UpdateProfile updateProfile = new UpdateProfile(driver);
 		updateProfile.goToPerformancePage();

@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -210,46 +209,6 @@ public class StandAloneTest {
 								}
 							}
 							
-//							if (skills.contains("selenium"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("java"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("git"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("quality Assurance"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("agile"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("testing"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("postman"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("api"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("azure"))
-//							{
-//								x+=1;
-//							}
-//							if (skills.contains("sql"))
-//							{
-//								x+=1;
-//							}
 						}
 						System.out.println("x = "+x);
 						double percentage = ((double)x/y)*100;
