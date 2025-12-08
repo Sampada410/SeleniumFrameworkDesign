@@ -1,4 +1,4 @@
-package SampadaTraining.SeleniumFrameworkDesign;
+package SampadaTraining.SeleniumFrameworkDesign.Tests;
 
 import java.time.Duration;
 import java.util.Arrays;
