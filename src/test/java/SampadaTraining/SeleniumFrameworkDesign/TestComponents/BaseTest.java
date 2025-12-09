@@ -17,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	public WebDriver driver;
+	public LandingPage landingPage;
 
 	public WebDriver InitializeDriver() throws IOException
 	{
@@ -48,24 +49,25 @@ public class BaseTest {
 	}
 	
 	@BeforeTest
-	public void launchingApplication() throws IOException, InterruptedException {
+	public LandingPage launchingApplication() throws IOException {
 		driver = InitializeDriver();
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//SeleniumFramework//Resources//GlobalData.properties");
 		prop.load(fis);
 		String app = prop.getProperty("application");
-		LandingPage landingPage = new LandingPage(driver);
+		landingPage = new LandingPage(driver);
 		
 		if(app.equalsIgnoreCase("naukri"))
 		{
 			landingPage.goToNaukri();
-			landingPage.LoggingAppication("sampadasdesai@gmail.com", "Sampada@4");
 		}
+		
 		else if(app.equalsIgnoreCase("linkedin"))
 		{
 			landingPage.goToLinkedin();
-			landingPage.LoggingAppicationLN("sampadajadhav0410@gmail.com", "Sampada@410");
 		}
+		
+		return landingPage;
 		
 		
 		

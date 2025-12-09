@@ -18,6 +18,7 @@ public class ApplyOnNaukri extends BaseTest {
 		String[] searchProfile = new String[2];
 		
 //		launchingApplication();
+		landingPage.LoggingAppication("sampadasdesai@gmail.com", "Sampada@4");
 		//Right side profile pop-up page 
 		UpdateProfile updateProfile = new UpdateProfile(driver);
 		updateProfile.goToPerformancePage();

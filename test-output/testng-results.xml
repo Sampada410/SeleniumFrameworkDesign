@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-08T10:27:48Z" name="Default suite" finished-at="2025-12-08T10:28:08Z" duration-ms="19424">
+  <suite started-at="2025-12-08T11:07:56Z" name="Default suite" finished-at="2025-12-08T11:08:01Z" duration-ms="5225">
     <groups>
     </groups>
-    <test started-at="2025-12-08T10:27:48Z" name="Default test" finished-at="2025-12-08T10:28:08Z" duration-ms="19424">
-      <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri">
-        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@5c80cf32]" started-at="2025-12-08T10:27:48Z" name="launchingApplication" finished-at="2025-12-08T10:27:53Z" duration-ms="4700" status="PASS">
+    <test started-at="2025-12-08T11:07:56Z" name="Default test" finished-at="2025-12-08T11:08:01Z" duration-ms="5225">
+      <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation">
+        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation@5c80cf32]" started-at="2025-12-08T11:07:56Z" name="launchingApplication" finished-at="2025-12-08T11:08:00Z" duration-ms="4144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingApplication -->
-        <test-method signature="applyOnNaukri()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@5c80cf32]" started-at="2025-12-08T10:27:53Z" name="applyOnNaukri" finished-at="2025-12-08T10:28:07Z" duration-ms="14451" status="PASS">
+        <test-method signature="applyOnNaukri()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation@5c80cf32]" started-at="2025-12-08T11:08:00Z" name="applyOnNaukri" finished-at="2025-12-08T11:08:01Z" duration-ms="834" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyOnNaukri -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@5c80cf32]" started-at="2025-12-08T10:28:07Z" name="TearDown" finished-at="2025-12-08T10:28:08Z" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation@5c80cf32]" started-at="2025-12-08T11:08:01Z" name="TearDown" finished-at="2025-12-08T11:08:01Z" duration-ms="207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri -->
+      </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
