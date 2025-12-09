@@ -7,7 +7,7 @@
         <methods>
           <include name="launchingApplication"/>
           <include name="TearDown"/>
-          <include name="applyOnNaukri" invocation-numbers="1"/>
+          <include name="applyOnNaukri"/>
         </methods>
       </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri -->
     </classes>

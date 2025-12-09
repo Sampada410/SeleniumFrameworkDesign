@@ -1,6 +1,9 @@
 package SampadaTraining.SeleniumFrameworkDesign.Tests;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.List;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,14 +16,15 @@ import SeleniumFrameworkDesign.PageObjects.UpdateProfile;
 public class ApplyOnNaukri extends BaseTest {
 
 	@Test(dataProvider = "getData")
-	public void applyOnNaukri(String email, String password, String job, String location) throws IOException, InterruptedException
+	public void applyOnNaukri(HashMap<String,String> input) throws IOException, InterruptedException
 	{
 		try{
 			String[] recruiterAction= new String[2];
 		String[] searchProfile = new String[2];
 		
 //		launchingApplication();
-		landingPage.LoggingAppication(email, password);
+		landingPage.LoggingAppication(input.get("email"), input.get("password"));
+		TakeScreenshot("Login");
 		//Right side profile pop-up page 
 		UpdateProfile updateProfile = new UpdateProfile(driver);
 		updateProfile.goToPerformancePage();
@@ -39,8 +43,8 @@ public class ApplyOnNaukri extends BaseTest {
 		JobSearch jobSearchPage = new JobSearch(driver);
 		jobSearchPage.goToHomePage();
 		jobSearchPage.goToRecommendedJob();
-		jobSearchPage.goToJobSearch(job, location);
-		jobSearchPage.filterApply("Engineering - Software & QA", "25-50 Lakhs", "Quality Assurance and Testing", location);
+		jobSearchPage.goToJobSearch(input.get("job"), input.get("location"));
+		jobSearchPage.filterApply("Engineering - Software & QA", "25-50 Lakhs", "Quality Assurance and Testing", input.get("location"));
 		jobSearchPage.jobKeywordsToApply();
 				
 	}
@@ -52,9 +56,10 @@ public class ApplyOnNaukri extends BaseTest {
 }
 	
 	@DataProvider
-	public Object[][] getData()
+	public Object[][] getData() throws IOException
 	{
-		return new Object[][] {{"sampadasdesai@gmail.com", "Sampada@4", "Quality assurance", "Pune"},{"santosh.n.desai@gmail.com", "Santosh26", "ETL test manager", "Pune"}};
+		List<HashMap<String, String>> data = JsonToMap(System.getProperty("user.dir")+"/src/test/java/SeleniumFrameworkDesign/Data/NaukriData.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 	
 }

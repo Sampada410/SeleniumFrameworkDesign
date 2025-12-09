@@ -3,9 +3,12 @@ package SampadaTraining.SeleniumFrameworkDesign.TestComponents;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -16,6 +19,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import SeleniumFrameworkDesign.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -97,4 +103,14 @@ public class BaseTest {
 		File dest = new File(path);
 		FileUtils.copyFile(src, dest);
 	}
+	
+	public List<HashMap<String,String>> JsonToMap(String filepath) throws IOException
+		{
+			String jsonData = FileUtils.readFileToString(new File(filepath),StandardCharsets.UTF_8);
+			
+			//jackson_databind: to convert data from String to Hashmap
+			ObjectMapper mapper = new ObjectMapper();
+			List<HashMap<String,String>> data=mapper.readValue(jsonData, new TypeReference<List<HashMap<String,String>>>(){});
+			return data;
+		}
 }
