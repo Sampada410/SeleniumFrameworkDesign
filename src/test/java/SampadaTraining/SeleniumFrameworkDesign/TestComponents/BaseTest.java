@@ -1,10 +1,16 @@
 package SampadaTraining.SeleniumFrameworkDesign.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -48,7 +54,7 @@ public class BaseTest {
 		
 	}
 	
-	@BeforeTest
+	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchingApplication() throws IOException {
 		driver = InitializeDriver();
 		Properties prop = new Properties();
@@ -73,9 +79,22 @@ public class BaseTest {
 		
 	}
 	
-	@AfterTest
+	@AfterMethod(alwaysRun = true)
 	public void TearDown()
 	{
-		driver.close();
+//		driver.quit();
+	}
+	
+	
+	public void TakeScreenshot(String testname) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String path = System.getProperty("user.dir")+"/screenshot/"+ testname +"_"+ timestamp +".png";
+		
+		File dest = new File(path);
+		FileUtils.copyFile(src, dest);
 	}
 }

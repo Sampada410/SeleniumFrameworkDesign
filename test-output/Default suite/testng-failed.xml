@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation">
+      <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri">
         <methods>
-          <include name="applyOnNaukri"/>
           <include name="launchingApplication"/>
           <include name="TearDown"/>
+          <include name="applyOnNaukri" invocation-numbers="1"/>
         </methods>
-      </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ErrorValidation -->
+      </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

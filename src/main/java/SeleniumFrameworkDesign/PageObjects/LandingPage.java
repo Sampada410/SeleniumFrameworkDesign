@@ -45,6 +45,12 @@ public class LandingPage extends AbstractComponents {
 	@FindBy(css =".server-err")
 	WebElement errorMsg;
 	
+	@FindBy(xpath="//label[contains(text(),'Email')]/following-sibling::div[@class=\"err\"]")
+	WebElement blankUsernameErrorMsg;
+	
+	@FindBy(xpath="//label[contains(text(),'Password')]/following-sibling::div[@class=\"err\"]")
+	WebElement blankPasswordErrorMsg;
+	
 	public void LoggingAppication(String email, String password)
 	{
 		usernameNK.sendKeys(email);
@@ -72,12 +78,24 @@ public class LandingPage extends AbstractComponents {
 		usernameLN.sendKeys(email);
 		passwordLN.sendKeys(password);
 		submit.click();
-//		Thread.sleep(30000);
+		
 	}
 	
 	public String getErrorMessage()
 	{
 		String errorMessage = errorMsg.getText();
+		return errorMessage;
+	}
+	
+	public String getblankUsernameErrorMessage()
+	{
+		String errorMessage = blankUsernameErrorMsg.getText();
+		return errorMessage;
+	}
+	
+	public String getblankPasswordErrorMessage()
+	{
+		String errorMessage = blankPasswordErrorMsg.getText();
 		return errorMessage;
 	}
 }

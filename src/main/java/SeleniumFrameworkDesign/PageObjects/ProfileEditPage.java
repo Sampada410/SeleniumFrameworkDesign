@@ -51,7 +51,7 @@ public class ProfileEditPage extends AbstractComponents{
 	public void resumeHeadlineEdit()
 	{
 		headliner.clear();
-		headliner.sendKeys("Experienced QA Professional | Expertise in System & Automation Testing | Strong Analytical, Communication, and Project Management Skills");
+		headliner.sendKeys("Quality Assurance Professional | Skilled in Automation testing, and End-to-End Quality Strategies | Strong Analytical, Communication & Project Management Skills | Dedicated Professional Focused on Efficiency, Quality, and Continuous Improvement");
 	}
 	
 	public void saveButton()
