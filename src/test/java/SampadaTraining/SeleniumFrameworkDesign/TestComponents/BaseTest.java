@@ -92,9 +92,9 @@ public class BaseTest {
 	}
 	
 	
-	public void TakeScreenshot(String testname) throws IOException
+	public String TakeScreenshot(String testname, WebDriver driver) throws IOException
 	{
-		TakesScreenshot ts = (TakesScreenshot) driver;
+		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -102,6 +102,7 @@ public class BaseTest {
 		
 		File dest = new File(path);
 		FileUtils.copyFile(src, dest);
+		return path;
 	}
 	
 	public List<HashMap<String,String>> JsonToMap(String filepath) throws IOException
@@ -113,4 +114,5 @@ public class BaseTest {
 			List<HashMap<String,String>> data=mapper.readValue(jsonData, new TypeReference<List<HashMap<String,String>>>(){});
 			return data;
 		}
+	
 }

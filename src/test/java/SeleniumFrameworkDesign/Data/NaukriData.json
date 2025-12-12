@@ -2,18 +2,22 @@
 	{
 		"email": "sampadasdesai@gmail.com",
 		"password": "Sampada@4",
-		"job":"Senior automation tester",
+		"job":"QA automation lead",
 		"location":"Pune"
 	},
 	
 	{
-		
-		"email": "santosh.n.desai@gmail.com",
-		"password": "Santosh26",
-		"job":"ETL QA manager",
-		"location":"Pune"
-		
-	}
+			"email": "sampadasdesai@gmail.com",
+			"password": "Sampada@4",
+			"job":"QA Manager",
+			"location":"Pune"
+	},
 	
+	{
+			"email": "sampadasdesai@gmail.com",
+			"password": "Sampada@4",
+			"job":"QA lead",
+			"location":"Pune"
+	}
 	
 ]

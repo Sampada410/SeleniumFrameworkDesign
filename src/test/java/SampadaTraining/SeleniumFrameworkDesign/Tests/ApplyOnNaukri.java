@@ -24,9 +24,10 @@ public class ApplyOnNaukri extends BaseTest {
 		
 //		launchingApplication();
 		landingPage.LoggingAppication(input.get("email"), input.get("password"));
-		TakeScreenshot("Login");
+		
 		//Right side profile pop-up page 
 		UpdateProfile updateProfile = new UpdateProfile(driver);
+		TakeScreenshot("Login", driver);
 		updateProfile.goToPerformancePage();
 		recruiterAction = updateProfile.recruiterActionCount();
 		searchProfile = updateProfile.searchAppearanceCount();
@@ -44,13 +45,13 @@ public class ApplyOnNaukri extends BaseTest {
 		jobSearchPage.goToHomePage();
 		jobSearchPage.goToRecommendedJob();
 		jobSearchPage.goToJobSearch(input.get("job"), input.get("location"));
-		jobSearchPage.filterApply("Engineering - Software & QA", "25-50 Lakhs", "Quality Assurance and Testing", input.get("location"));
+//		jobSearchPage.filterApply("Engineering - Software & QA", "25-50 Lakhs", "Quality Assurance and Testing", input.get("location"));
 		jobSearchPage.jobKeywordsToApply();
 				
 	}
 	
 	catch(Exception e) {
-		TakeScreenshot("applyOnNaukri");
+		TakeScreenshot("applyOnNaukri", driver);
 		throw e;
 	}
 }
@@ -59,7 +60,7 @@ public class ApplyOnNaukri extends BaseTest {
 	public Object[][] getData() throws IOException
 	{
 		List<HashMap<String, String>> data = JsonToMap(System.getProperty("user.dir")+"/src/test/java/SeleniumFrameworkDesign/Data/NaukriData.json");
-		return new Object[][] {{data.get(0)},{data.get(1)}};
+		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)}};
 	}
 	
 }

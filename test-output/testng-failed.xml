@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="SampadaTraining.SeleniumFrameworkDesign.TestComponents.Listeners"/>
+  </listeners>
   <test thread-count="5" name="JobApplyOn NaukriTest(failed)">
     <classes>
       <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri">
         <methods>
           <include name="launchingApplication"/>
           <include name="TearDown"/>
-          <include name="applyOnNaukri"/>
+          <include name="applyOnNaukri" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri -->
     </classes>

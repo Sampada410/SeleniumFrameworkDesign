@@ -15,7 +15,7 @@ public class ErrorValidationTest extends BaseTest {
 	{
 		landingPage.LoggingAppication("sampadasjdesai@gmail.com", "Sampada@4");
 		String msg = landingPage.getErrorMessage();
-		TakeScreenshot("ErrorLoggingPage");
+		TakeScreenshot("ErrorLoggingPage", driver);
 		Assert.assertEquals("Invalid details. Please check the Email ID - Password combination.\nIf you are a recruiter, please login from Employer login", msg);
 				
 	}
@@ -24,7 +24,7 @@ public class ErrorValidationTest extends BaseTest {
 	public void ErrorWithBlankLogging() throws IOException
 	{
 		landingPage.LoggingAppication("", "");
-		TakeScreenshot("ErrorWithBlankLogging");
+		TakeScreenshot("ErrorWithBlankLogging", driver);
 		String uMsg = landingPage.getblankUsernameErrorMessage();
 		String pMsg = landingPage.getblankPasswordErrorMessage();
 		Assert.assertEquals("Please enter your Email ID / Username", uMsg);
