@@ -17,12 +17,14 @@ public class Listeners extends BaseTest implements ITestListener{
 
 	ExtentTest test;
 	ExtentReports extent = ExtentReportFile.config();
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	//for running and adding error screenshot correctly during parallel execution
 	
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		test = extent.createTest(result.getMethod().getMethodName());
-		
+		extentTest.set(test);//pass the ExtentTest variable
 	}
 
 	@Override

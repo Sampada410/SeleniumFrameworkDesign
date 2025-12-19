@@ -30,7 +30,7 @@ public class JobSearch extends AbstractComponents {
 	@FindBy(css=".nI-gNb-custom-Jobs")
 	WebElement jobSearchLink;
 	
-	@FindBy(xpath = "//div[text()='Recommended jobs']")
+	@FindBy(xpath = "//div/span[text()='Recommended jobs']")
 	WebElement recommendedJob;
 	
 	@FindBy(css = ".nI-gNb-sb__placeholder")
