@@ -36,9 +36,9 @@ public class ApplyOnNaukri extends BaseTest {
 		//Main user profile editing page
 		ProfileEditPage editProfile = new ProfileEditPage(driver);
 		editProfile.userProfilePage();
-//		editProfile.editProfile();
-//		editProfile.resumeHeadlineEdit();
-//		editProfile.saveButton();
+		editProfile.editProfile();
+		editProfile.resumeHeadlineEdit();
+		editProfile.saveButton();
 
 		//Job search and job applying process
 		JobSearch jobSearchPage = new JobSearch(driver);
@@ -60,7 +60,25 @@ public class ApplyOnNaukri extends BaseTest {
 	public Object[][] getData() throws IOException
 	{
 		List<HashMap<String, String>> data = JsonToMap(System.getProperty("user.dir")+"/src/test/java/SeleniumFrameworkDesign/Data/NaukriData.json");
-		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)}};
+		return new Object[][] {{data.get(0)}};
 	}
+	
+//	,{data.get(1)},{data.get(2)}
+//,
+//	
+//	{
+//			"email": "sampadasdesai@gmail.com",
+//			"password": "Sampada@4",
+//			"job":"QA Manager",
+//			"location":"Remote"
+//	},
+//	
+//	{
+//			"email": "sampadasdesai@gmail.com",
+//			"password": "Sampada@4",
+//			"job":"QA lead",
+//			"location":"Remote"
+//	}
+//	
 	
 }
