@@ -8,8 +8,10 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -88,6 +90,18 @@ public class BaseTest {
 	@AfterMethod(alwaysRun = true)
 	public void TearDown()
 	{
+//		Set<String> windows = driver.getWindowHandles();
+//		Iterator<String> it = windows.iterator();
+//		String parentWindow = it.next();
+//		for(String window:windows)
+//		{
+//			if(!window.equals(parentWindow))
+//			{
+//				driver.switchTo().window(window);
+//				driver.close();
+//			}
+//		}
+		
 //		driver.quit();
 	}
 	
