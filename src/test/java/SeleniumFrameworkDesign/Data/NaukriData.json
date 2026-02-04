@@ -4,5 +4,24 @@
 		"password": "Sampada@4",
 		"job":"QA automation lead",
 		"location":"Remote"
+	},
+	{
+			"email": "sampadasdesai@gmail.com",
+			"password": "Sampada@4",
+			"job":"QA test lead",
+			"location":"Remote"
+	},
+	
+	{
+			"email": "sampadasdesai@gmail.com",
+			"password": "Sampada@4",
+			"job":"QA Manager",
+			"location":"Remote"
+	},
+	{
+			"email": "sampadasdesai@gmail.com",
+			"password": "Sampada@4",
+			"job":"QA automation Manager",
+			"location":"Remote"
 	}
 ]

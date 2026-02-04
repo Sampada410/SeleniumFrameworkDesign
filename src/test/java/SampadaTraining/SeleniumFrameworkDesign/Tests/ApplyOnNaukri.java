@@ -20,7 +20,7 @@ public class ApplyOnNaukri extends BaseTest {
 	{
 		try{
 			String[] recruiterAction= new String[2];
-		String[] searchProfile = new String[2];
+			String[] searchProfile = new String[2];
 		
 //		launchingApplication();
 		landingPage.LoggingAppication(input.get("email"), input.get("password"));
@@ -60,7 +60,7 @@ public class ApplyOnNaukri extends BaseTest {
 	public Object[][] getData() throws IOException
 	{
 		List<HashMap<String, String>> data = JsonToMap(System.getProperty("user.dir")+"/src/test/java/SeleniumFrameworkDesign/Data/NaukriData.json");
-		return new Object[][] {{data.get(0)}};
+		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)}};
 	}
 	
 //	,{data.get(1)},{data.get(2)}

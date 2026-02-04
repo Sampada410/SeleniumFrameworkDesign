@@ -51,7 +51,7 @@ public class ProfileEditPage extends AbstractComponents{
 	public void resumeHeadlineEdit()
 	{
 		headliner.clear();
-		headliner.sendKeys("Quality Assurance Professional | Skilled in Automation testing, and End-to-End Quality Strategies | Strong Analytical, Communication & Project Management Skills | Dedicated Professional Focused on Efficiency, Quality, and Continuous Improvement");
+		headliner.sendKeys("QA Lead | LLM & API Automation Expert | Selenium, Java, SQL & Snowflake | KPI-Driven Agile Leader | Immediate Joiner ready to scale AI-driven testing & process improvements");
 	}
 	
 	public void saveButton()
