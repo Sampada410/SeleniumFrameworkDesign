@@ -1,0 +1,10 @@
+package SeleniumFrameworkDesign.API;
+
+public class GetRequest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
