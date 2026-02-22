@@ -2,26 +2,26 @@
 	{
 		"email": "sampadasdesai@gmail.com",
 		"password": "Sampada@4",
-		"job":"QA automation lead",
-		"location":"Remote"
+		"job":"Salesforce QA automation lead",
+		"location":"Pune"
 	},
 	{
 			"email": "sampadasdesai@gmail.com",
 			"password": "Sampada@4",
 			"job":"QA test lead",
-			"location":"Remote"
+			"location":"Pune"
 	},
 	
 	{
 			"email": "sampadasdesai@gmail.com",
 			"password": "Sampada@4",
 			"job":"QA Manager",
-			"location":"Remote"
+			"location":"Pune"
 	},
 	{
 			"email": "sampadasdesai@gmail.com",
 			"password": "Sampada@4",
 			"job":"QA automation Manager",
-			"location":"Remote"
+			"location":"Pune"
 	}
 ]
