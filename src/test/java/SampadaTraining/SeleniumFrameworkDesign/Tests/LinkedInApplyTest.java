@@ -1,6 +1,8 @@
 package SampadaTraining.SeleniumFrameworkDesign.Tests;
 
 import java.io.IOException;
+import java.util.HashMap;
+
 import org.testng.annotations.Test;
 
 import SeleniumFrameworkDesign.PageObjects.LinkedInJobApplyPage;
@@ -15,12 +17,16 @@ public class LinkedInApplyTest extends BaseTest {
 
         LinkedInJobApplyPage linkedInPage = new LinkedInJobApplyPage(driver);
 
-        // Use secure method to store credentials (not hardcoded in real project)
-        linkedInPage.login("your_email@gmail.com", "your_password");
+        HashMap<String,String> data = getJsonDataToMap("LinkedInData.json");
 
-        Thread.sleep(3000);
+        linkedInPage.login(data.get("email"), data.get("password"));
+        linkedInPage.searchJob(data.get("jobTitle"));
+        
+//        linkedInPage.login("your_email@gmail.com", "your_password");
 
-        linkedInPage.searchJob("Automation Test Lead");
+//        Thread.sleep(3000);
+//
+//        linkedInPage.searchJob("Automation Test Lead");
 
         Thread.sleep(3000);
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-18T13:46:03Z" name="Suite" finished-at="2026-02-18T13:47:54Z" duration-ms="111325">
+  <suite started-at="2026-02-23T07:29:35Z" name="Suite" finished-at="2026-02-23T07:31:16Z" duration-ms="101158">
     <groups>
     </groups>
-    <test started-at="2026-02-18T13:46:03Z" name="JobApplyOn NaukriTest" finished-at="2026-02-18T13:47:54Z" duration-ms="111325">
+    <test started-at="2026-02-23T07:29:35Z" name="JobApplyOn NaukriTest" finished-at="2026-02-23T07:31:16Z" duration-ms="101158">
       <class name="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri">
-        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:03Z" name="launchingApplication" finished-at="2026-02-18T13:46:10Z" duration-ms="7331" status="PASS">
+        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:29:35Z" name="launchingApplication" finished-at="2026-02-23T07:29:41Z" duration-ms="6149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingApplication -->
-        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:10Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-18T13:46:24Z" duration-ms="14350" status="PASS">
+        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:29:41Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-23T07:29:46Z" duration-ms="5001" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -19,18 +19,89 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <i class="naukicon cross ni-gnb-icn ni-gnb-icn-cross-drawer"></i> is not clickable at point (1321, 29). Other element would receive the click: <div class="crossIcon chatBot chatBot-ic-cross" style="margin-left:8px"></div>
+  (Session info: chrome=145.0.7632.77)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.30'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7725b6a7e47538c68a57729aa8bc76c8, clickElement {id=f.8FA68854E8107EDADF118D3141F3DA29.d.5D1C70256764F79F4B1967A7E369734D.e.169}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.77, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63120}, goog:processID: 30220, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63120/devtoo..., se:cdpVersion: 145.0.7632.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7725b6a7e47538c68a57729aa8bc76c8)] -> css selector: .ni-gnb-icn-cross-drawer]
+Session ID: 7725b6a7e47538c68a57729aa8bc76c8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <i class="naukicon cross ni-gnb-icn ni-gnb-icn-cross-drawer"></i> is not clickable at point (1321, 29). Other element would receive the click: <div class="crossIcon chatBot chatBot-ic-cross" style="margin-left:8px"></div>
+  (Session info: chrome=145.0.7632.77)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.30'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7725b6a7e47538c68a57729aa8bc76c8, clickElement {id=f.8FA68854E8107EDADF118D3141F3DA29.d.5D1C70256764F79F4B1967A7E369734D.e.169}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.77, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63120}, goog:processID: 30220, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63120/devtoo..., se:cdpVersion: 145.0.7632.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7725b6a7e47538c68a57729aa8bc76c8)] -> css selector: .ni-gnb-icn-cross-drawer]
+Session ID: 7725b6a7e47538c68a57729aa8bc76c8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy16.click(Unknown Source)
+at SeleniumFrameworkDesign.PageObjects.UpdateProfile.closePerformancePage(UpdateProfile.java:58)
+at SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri.applyOnNaukri(ApplyOnNaukri.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyOnNaukri -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:24Z" name="TearDown" finished-at="2026-02-18T13:46:24Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:29:46Z" name="TearDown" finished-at="2026-02-23T07:29:46Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:24Z" name="launchingApplication" finished-at="2026-02-18T13:46:29Z" duration-ms="4278" status="PASS">
+        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:29:46Z" name="launchingApplication" finished-at="2026-02-23T07:29:51Z" duration-ms="4646" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingApplication -->
-        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:29Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-18T13:46:58Z" duration-ms="28798" status="PASS">
+        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:29:51Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-23T07:30:17Z" duration-ms="26372" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,15 +112,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyOnNaukri -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:58Z" name="TearDown" finished-at="2026-02-18T13:46:58Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:17Z" name="TearDown" finished-at="2026-02-23T07:30:17Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:46:58Z" name="launchingApplication" finished-at="2026-02-18T13:47:01Z" duration-ms="3127" status="PASS">
+        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:17Z" name="launchingApplication" finished-at="2026-02-23T07:30:22Z" duration-ms="4513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingApplication -->
-        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:47:01Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-18T13:47:27Z" duration-ms="26680" status="PASS">
+        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:22Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-23T07:30:51Z" duration-ms="28963" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,15 +131,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyOnNaukri -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:47:27Z" name="TearDown" finished-at="2026-02-18T13:47:27Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:47:27Z" name="launchingApplication" finished-at="2026-02-18T13:47:32Z" duration-ms="4413" status="PASS">
+        <test-method is-config="true" signature="launchingApplication()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:51Z" name="launchingApplication" finished-at="2026-02-23T07:30:55Z" duration-ms="3835" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingApplication -->
-        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:47:32Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-18T13:47:54Z" duration-ms="22050" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:51Z" name="TearDown" finished-at="2026-02-23T07:30:51Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="applyOnNaukri(java.util.HashMap)[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:30:55Z" name="applyOnNaukri" data-provider="getData" finished-at="2026-02-23T07:31:16Z" duration-ms="21147" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,7 +150,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyOnNaukri -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@40c80397]" started-at="2026-02-18T13:47:54Z" name="TearDown" finished-at="2026-02-18T13:47:54Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri@3fffff43]" started-at="2026-02-23T07:31:16Z" name="TearDown" finished-at="2026-02-23T07:31:16Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

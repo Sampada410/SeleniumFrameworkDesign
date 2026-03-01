@@ -2,6 +2,7 @@ package SampadaTraining.SeleniumFrameworkDesign.TestComponents;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
@@ -14,6 +15,8 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -128,5 +131,27 @@ public class BaseTest {
 			List<HashMap<String,String>> data=mapper.readValue(jsonData, new TypeReference<List<HashMap<String,String>>>(){});
 			return data;
 		}
+	
+	public HashMap<String, String> getJsonDataToMap(String fileName) throws IOException {
+
+	    HashMap<String, String> dataMap = new HashMap<String, String>();
+
+	    try {
+	        JSONParser parser = new JSONParser();
+	        FileReader reader = new FileReader(System.getProperty("user.dir") 
+	                + "//src//test//java//SeleniumFrameworkDesign//Data//" + fileName);
+
+	        JSONObject jsonObject = (JSONObject) parser.parse(reader);
+
+	        dataMap.put("email", jsonObject.get("email").toString());
+	        dataMap.put("password", jsonObject.get("password").toString());
+	        dataMap.put("jobTitle", jsonObject.get("jobTitle").toString());
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return dataMap;
+	}
 	
 }

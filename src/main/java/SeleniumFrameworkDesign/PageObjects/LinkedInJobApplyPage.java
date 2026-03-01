@@ -31,9 +31,12 @@ public class LinkedInJobApplyPage extends AbstractComponents {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement signInBtn;
 
-    @FindBy(xpath = "//input[contains(@placeholder,'Search')]")
-    WebElement jobSearchBox;
+//    @FindBy(xpath = "//input[contains(@placeholder,'Search')]")
+//    WebElement jobSearchBox;
 
+    @FindBy(xpath = "//input[@aria-label='Search']")
+    WebElement jobSearchBox;
+    
     @FindBy(xpath = "//button[contains(@aria-label,'Search')]")
     WebElement searchButton;
 
@@ -55,8 +58,10 @@ public class LinkedInJobApplyPage extends AbstractComponents {
     }
 
     public void searchJob(String jobTitle) {
+//    	 wait.until(ExpectedConditions.visibilityOf(jobSearchBox));
         jobSearchBox.sendKeys(jobTitle);
-        searchButton.click();
+        jobSearchBox.sendKeys(Keys.ENTER);
+//        searchButton.click();
     }
 
     public void clickFirstJobAndApply() {
