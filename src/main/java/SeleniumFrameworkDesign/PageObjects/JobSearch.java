@@ -16,6 +16,7 @@ import SeleniumFramework.AbstractComponents.AbstractComponents;
 
 public class JobSearch extends AbstractComponents {
 
+	private static final String Freshness = null;
 	WebDriver driver;
 	int expectedPercentage = 35;
 	
@@ -74,29 +75,42 @@ public class JobSearch extends AbstractComponents {
 		recommendedJob.click();
 	}
 	
-	public void filterApply(String department, String salary, String roleCategory, String location ) {
+	public void filterApply(String location, String freshness, String freshnessID ) {
 		
 		for(int i = 0; i < filterContainer.size(); i++)
 			{
 				WebElement filter = filterContainer.get(i);
 				
 				String filterName = filter.findElement(By.cssSelector(".styles_filterHeading___hZQx")).getText();
-				if(filterName.equals("Department"))
-				{
-					if (!(driver.findElement(By.xpath("//span[@title='" + department + "']"))).isSelected())
-					{
-						driver.findElement(By.xpath("//span[@title='" + department + "']")).click();
-					}
-					waitForStaleness(filter);
-				}
+//				if(filterName.equals("Department"))
+//				{
+//					if (!(driver.findElement(By.xpath("//span[@title='" + department + "']"))).isSelected())
+//					{
+//						driver.findElement(By.xpath("//span[@title='" + department + "']")).click();
+//					}
+//					waitForStaleness(filter);
+//				}
 				
-				if(filterName.equals("Salary"))
+//				if(filterName.equals("Salary"))
+//				{
+//					if (!(driver.findElement(By.xpath("//span[@title='"+salary+"']"))).isSelected())
+//					{
+//						driver.findElement(By.xpath("//span[@title='"+salary+"']")).click();
+//					}
+//					waitForStaleness(filter);
+//				}
+				
+				if(filterName.equals("Freshness"))
 				{
-					if (!(driver.findElement(By.xpath("//span[@title='"+salary+"']"))).isSelected())
-					{
-						driver.findElement(By.xpath("//span[@title='"+salary+"']")).click();
-					}
-					waitForStaleness(filter);
+				    WebElement freshnessFilter = driver.findElement(By.xpath("//div[@data-filter-id=\"freshness\"]//i[@class=\"ni-icon-arrow-down\"]"));
+
+				    if (!freshnessFilter.isSelected())
+				    {
+				        freshnessFilter.click();
+				        driver.findElement(By.xpath("//a[@data-id = \""+freshnessID+"\"]/span[text()='"+freshness+"']")).click();
+				    }
+
+				    waitForStaleness(filter);
 				}
 					
 //				if(filterName.equals("Role category"))

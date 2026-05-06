@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,11 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com...)">applyOnNaukri({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,17 +103,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com})">applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1...)">applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com})">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, fresh...)">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, fresh...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com})">applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last...)">applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri" class="method navigator-link" hash-for-method="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshnes...)">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshnes...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,46 +133,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com...)">
-                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com...) -->
-                  <span class="method-name">applyOnNaukri</span>
-                  <span class="parameters">({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com})</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;naukicon cross ni-gnb-icn ni-gnb-icn-cross-drawer&quot;&gt;&lt;/i&gt; is not clickable at point (1321, 29). Other element would receive the click: &lt;div class=&quot;crossIcon chatBot chatBot-ic-cross&quot; style=&quot;margin-left:8px&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=145.0.7632.77)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.30&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7725b6a7e47538c68a57729aa8bc76c8, clickElement {id=f.8FA68854E8107EDADF118D3141F3DA29.d.5D1C70256764F79F4B1967A7E369734D.e.169}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.77, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63120}, goog:processID: 30220, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63120/devtoo..., se:cdpVersion: 145.0.7632.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7725b6a7e47538c68a57729aa8bc76c8)] -&gt; css selector: .ni-gnb-icn-cross-drawer]
-Session ID: 7725b6a7e47538c68a57729aa8bc76c8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy16.click(Unknown Source)
-	at SeleniumFrameworkDesign.PageObjects.UpdateProfile.closePerformancePage(UpdateProfile.java:58)
-	at SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri.applyOnNaukri(ApplyOnNaukri.java:34)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -189,26 +141,34 @@ Session ID: 7725b6a7e47538c68a57729aa8bc76c8
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com})">
-                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com}) -->
+                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1...)">
+                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1...) -->
                   <span class="method-name">applyOnNaukri</span>
-                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com})</span>
+                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1 day, email=sampadasdesai@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com})">
-                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com}) -->
+                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, fresh...)">
+                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, fresh...) -->
                   <span class="method-name">applyOnNaukri</span>
-                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com})</span>
+                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, freshness=Last 1 day, email=sampadasdesai@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com})">
-                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com}) -->
+                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last...)">
+                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last...) -->
                   <span class="method-name">applyOnNaukri</span>
-                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com})</span>
+                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last 1 day, email=sampadasdesai@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshnes...)">
+                  </a> <!-- applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshnes...) -->
+                  <span class="method-name">applyOnNaukri</span>
+                  <span class="parameters">({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshness=Last 1 day, email=sampadasdesai@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,7 +181,7 @@ Session ID: 7725b6a7e47538c68a57729aa8bc76c8
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;SampadaTraining.SeleniumFrameworkDesign.TestComponents.Listeners&quot;/&gt;
@@ -272,19 +232,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'applyOnNaukri')
 data.setCell(0, 2, 'SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri')
-data.setCell(0, 3, 28963);
+data.setCell(0, 3, 26621);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'applyOnNaukri')
 data.setCell(1, 2, 'SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri')
-data.setCell(1, 3, 26372);
+data.setCell(1, 3, 25610);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'applyOnNaukri')
 data.setCell(2, 2, 'SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri')
-data.setCell(2, 3, 21147);
+data.setCell(2, 3, 22423);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'applyOnNaukri')
 data.setCell(3, 2, 'SampadaTraining.SeleniumFrameworkDesign.Tests.ApplyOnNaukri')
-data.setCell(3, 3, 5001);
+data.setCell(3, 3, 21017);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -321,54 +281,53 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=Salesforce QA automation lead, email=sampadasdesai@gmail.com...)</span>
-                <span class="method-start">6149 ms</span>
+                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation lead, freshnessID=filter-freshness-1, freshnes...)</span>
+                <span class="method-start">4455 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">11404 ms</span>
+                <span class="method-start">25490 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchingApplication</span>
-                <span class="method-start">11404 ms</span>
+                <span class="method-start">25493 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, email=sampadasdesai@gmail.com})</span>
-                <span class="method-start">16050 ms</span>
+                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA test lead, freshnessID=filter-freshness-1, freshness=Last...)</span>
+                <span class="method-start">29329 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">42427 ms</span>
+                <span class="method-start">54944 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchingApplication</span>
-                <span class="method-start">42428 ms</span>
+                <span class="method-start">54948 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, email=sampadasdesai@gmail.com})</span>
-                <span class="method-start">46941 ms</span>
+                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA Manager, freshnessID=filter-freshness-1, freshness=Last 1...)</span>
+                <span class="method-start">59075 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">75909 ms</span>
+                <span class="method-start">85703 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchingApplication</span>
-                <span class="method-start">75909 ms</span>
+                <span class="method-start">85705 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, email=sampadasdesai@gmail.com})</span>
-                <span class="method-start">79744 ms</span>
+                <span class="method-name">applyOnNaukri({password=Sampada@4, location=Pune, job=QA automation Manager, freshnessID=filter-freshness-1, fresh...)</span>
+                <span class="method-start">89654 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">100900 ms</span>
+                <span class="method-start">112088 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

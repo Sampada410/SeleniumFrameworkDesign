@@ -2,26 +2,34 @@
 	{
 		"email": "sampadasdesai@gmail.com",
 		"password": "Sampada@4",
-		"job":"Salesforce QA automation lead",
-		"location":"Pune"
+		"job":"QA automation lead",
+		"location":"Pune",
+		"freshnessID":"filter-freshness-1",
+		"freshness":"Last 1 day"
 	},
 	{
-			"email": "sampadasdesai@gmail.com",
-			"password": "Sampada@4",
-			"job":"QA test lead",
-			"location":"Pune"
-	},
-	
-	{
-			"email": "sampadasdesai@gmail.com",
-			"password": "Sampada@4",
-			"job":"QA Manager",
-			"location":"Pune"
-	},
-	{
-			"email": "sampadasdesai@gmail.com",
-			"password": "Sampada@4",
-			"job":"QA automation Manager",
-			"location":"Pune"
-	}
+				"email": "sampadasdesai@gmail.com",
+				"password": "Sampada@4",
+				"job":"QA test lead",
+				"location":"Pune",
+				"freshnessID":"filter-freshness-1",
+				"freshness":"Last 1 day"
+		},
+		
+		{
+				"email": "sampadasdesai@gmail.com",
+				"password": "Sampada@4",
+				"job":"QA Manager",
+				"location":"Pune",
+				"freshnessID":"filter-freshness-1",
+				"freshness":"Last 1 day"
+		},
+		{
+				"email": "sampadasdesai@gmail.com",
+				"password": "Sampada@4",
+				"job":"QA automation Manager",
+				"location":"Pune",
+				"freshnessID":"filter-freshness-1",
+				"freshness":"Last 1 day"
+		}
 ]

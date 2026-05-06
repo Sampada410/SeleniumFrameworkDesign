@@ -146,6 +146,8 @@ public class BaseTest {
 	        dataMap.put("email", jsonObject.get("email").toString());
 	        dataMap.put("password", jsonObject.get("password").toString());
 	        dataMap.put("jobTitle", jsonObject.get("jobTitle").toString());
+	        dataMap.put("location", jsonObject.get("location").toString());
+	        dataMap.put("freshness", jsonObject.get("freshness").toString());
 
 	    } catch (Exception e) {
 	        e.printStackTrace();

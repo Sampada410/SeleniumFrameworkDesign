@@ -24,6 +24,7 @@ public class ApplyOnNaukri extends BaseTest {
 		
 //		launchingApplication();
 		landingPage.LoggingAppication(input.get("email"), input.get("password"));
+		System.out.println(input.get("location"));
 		
 		//Right side profile pop-up page 
 		UpdateProfile updateProfile = new UpdateProfile(driver);
@@ -45,7 +46,7 @@ public class ApplyOnNaukri extends BaseTest {
 		jobSearchPage.goToHomePage();
 		jobSearchPage.goToRecommendedJob();
 		jobSearchPage.goToJobSearch(input.get("job"), input.get("location"));
-//		jobSearchPage.filterApply("Engineering - Software & QA", "25-50 Lakhs", "Quality Assurance and Testing", input.get("location"));
+		jobSearchPage.filterApply(input.get("location"), input.get("freshness"), input.get("freshnessID"));
 		jobSearchPage.jobKeywordsToApply();
 				
 	}
