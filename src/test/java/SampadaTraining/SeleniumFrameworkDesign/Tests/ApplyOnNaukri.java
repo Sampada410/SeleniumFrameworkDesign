@@ -46,9 +46,9 @@ public class ApplyOnNaukri extends BaseTest {
 		jobSearchPage.goToHomePage();
 		jobSearchPage.goToRecommendedJob();
 		jobSearchPage.goToJobSearch(input.get("job"), input.get("location"));
-		jobSearchPage.filterApply(input.get("location"), input.get("freshness"), input.get("freshnessID"));
+		jobSearchPage.filterApply(input.get("location"), input.get("freshness"), input.get("freshnessID"), input.get("department"));
 		jobSearchPage.jobKeywordsToApply();
-				
+		jobSearchPage.pagination();
 	}
 	
 	catch(Exception e) {

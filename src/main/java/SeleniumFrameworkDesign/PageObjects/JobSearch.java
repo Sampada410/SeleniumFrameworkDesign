@@ -1,5 +1,6 @@
 package SeleniumFrameworkDesign.PageObjects;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -16,7 +17,7 @@ import SeleniumFramework.AbstractComponents.AbstractComponents;
 
 public class JobSearch extends AbstractComponents {
 
-	private static final String Freshness = null;
+//	private static final String Freshness = null;
 	WebDriver driver;
 	int expectedPercentage = 35;
 	
@@ -61,7 +62,9 @@ public class JobSearch extends AbstractComponents {
 	@FindBy(className = "styles_JDC__job-highlight-list__QZC12")
 	WebElement jobHighlight;
 	
-	
+	@FindBy(className = "styles_btn-secondary__2AsIP")
+	WebElement EnabledNextButton;
+
 	public void goToJobSearch(String job,String location) {
 		jobsearchEditor.click();
 		jobKeyword.sendKeys(job);
@@ -75,21 +78,33 @@ public class JobSearch extends AbstractComponents {
 		recommendedJob.click();
 	}
 	
-	public void filterApply(String location, String freshness, String freshnessID ) {
+	public void filterApply(String location, String freshness, String freshnessID, String department) {
 		
 		for(int i = 0; i < filterContainer.size(); i++)
 			{
 				WebElement filter = filterContainer.get(i);
-				
 				String filterName = filter.findElement(By.cssSelector(".styles_filterHeading___hZQx")).getText();
-//				if(filterName.equals("Department"))
-//				{
-//					if (!(driver.findElement(By.xpath("//span[@title='" + department + "']"))).isSelected())
+				
+				if(filterName.equals("Department"))
+				{
+					System.out.println("inside department");
+					
+
+					WebElement departmentFilter = driver.findElement(By.xpath("//label[@for='chk-Engineering - Software & QA-functionAreaIdGid-']"));
+					departmentFilter.click();
+//					WebElement deptCheckbox = driver.findElement(By.xpath("//i[@class='ni-icon-checked']"));
+//					deptCheckbox.click();
+//					boolean b = deptCheckbox.isSelected();
+//					System.out.println(b);
+//					if (!departmentFilter.isSelected())
 //					{
-//						driver.findElement(By.xpath("//span[@title='" + department + "']")).click();
+//						System.out.println("INside again");
+//						deptCheckbox.click();
+//						System.out.println("Clicked");
+////						
 //					}
-//					waitForStaleness(filter);
-//				}
+					waitForStaleness(filter);
+				}
 				
 //				if(filterName.equals("Salary"))
 //				{
@@ -109,7 +124,6 @@ public class JobSearch extends AbstractComponents {
 				        freshnessFilter.click();
 				        driver.findElement(By.xpath("//a[@data-id = \""+freshnessID+"\"]/span[text()='"+freshness+"']")).click();
 				    }
-
 				    waitForStaleness(filter);
 				}
 					
@@ -189,7 +203,9 @@ public class JobSearch extends AbstractComponents {
 									"maven",
 									"scrum master",
 									"rest api",
-									"KPI reports");
+									"KPI reports",
+									"Python", 
+									"Cucumber");
 							
 							for(String defKeySkill: defKeySkills)
 							{
@@ -218,6 +234,35 @@ public class JobSearch extends AbstractComponents {
 		}
 		System.out.println("Applied for "+z+" applications");
 		
+	}
+
+	public void pagination() throws InterruptedException, IOException {
+		int count = 1;
+		WebElement nextButton = driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		scrollBy(nextButton);
+		waitForElement(nextButton);
+		boolean enabled = nextButton.isEnabled();
+		System.out.println("Enable outside loop"+ enabled);
+		while (enabled) {
+			
+//			TakeScreenshot("Pagination", driver);
+			nextButton.click();
+			count++;
+			System.out.println(count);
+			Thread.sleep(2000);
+			this.jobKeywordsToApply();
+			Thread.sleep(2000);
+			nextButton = driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+			scrollBy(nextButton);
+			waitForElement(nextButton);
+			enabled = nextButton.isEnabled();
+			System.out.println("Enable in loop"+enabled);
+			
+//			if(nextButton.isSelected())
+//			{
+//				System.out.println("Button selected");
+//			}
+		}
 	}
 
 }

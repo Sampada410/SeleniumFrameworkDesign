@@ -5,31 +5,35 @@
 		"job":"QA automation lead",
 		"location":"Pune",
 		"freshnessID":"filter-freshness-1",
-		"freshness":"Last 1 day"
+		"freshness":"Last 1 day",
+		"department":"Engineering - Software & QA"
 	},
 	{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"QA test lead",
+				"job":"Senior software tester",
 				"location":"Pune",
 				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day"
+				"freshness":"Last 1 day",
+				"department":"Engineering - Software & QA"
 		},
 		
 		{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"QA Manager",
+				"job":"Senior automation tester",
 				"location":"Pune",
 				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day"
+				"freshness":"Last 1 day",
+				"department":"Engineering - Software & QA"
 		},
 		{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"QA automation Manager",
+				"job":"Senior Software Engineer - Test",
 				"location":"Pune",
 				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day"
+				"freshness":"Last 1 day",
+				"department":"Engineering - Software & QA"
 		}
 ]

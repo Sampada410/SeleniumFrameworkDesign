@@ -1,8 +1,15 @@
 package SeleniumFramework.AbstractComponents;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -57,8 +64,22 @@ public class AbstractComponents {
 		Actions actions = new Actions(driver);
 //		actions.scrollByAmount(x,y).perform();
 		actions.scrollToElement(webelement).perform();
+		actions.moveToElement(webelement);
 	}
 
+	
+	public String TakeScreenshot(String testname, WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String path = System.getProperty("user.dir")+"/screenshot/"+ testname +"_"+ timestamp +".png";
+		
+		File dest = new File(path);
+		FileUtils.copyFile(src, dest);
+		return path;
+	}
 
 
 }
