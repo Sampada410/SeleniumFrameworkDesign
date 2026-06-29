@@ -51,7 +51,7 @@ public class ProfileEditPage extends AbstractComponents{
 	public void resumeHeadlineEdit()
 	{
 		headliner.clear();
-		headliner.sendKeys("QA Lead | LLM & API Automation Expert | Selenium, Java, Python, SQL & Snowflake | KPI-Driven Agile Leader | Immediate Joiner ready to scale AI-driven testing & process improvements");
+		headliner.sendKeys("QA Lead | LLM & API Automation Expert | Selenium, Java, Python, SQL & Snowflake | ETL testing | KPI-Driven Agile Leader | Immediate Joiner ready to scale AI-driven testing & process improvements");
 	}
 	
 	public void saveButton()

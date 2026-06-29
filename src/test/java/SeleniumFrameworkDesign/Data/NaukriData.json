@@ -2,38 +2,38 @@
 	{
 		"email": "sampadasdesai@gmail.com",
 		"password": "Sampada@4",
-		"job":"QA automation lead",
+		"job":"senior QA automation lead",
 		"location":"Pune",
-		"freshnessID":"filter-freshness-1",
-		"freshness":"Last 1 day",
+		"freshnessID":"filter-freshness-3",
+		"freshness":"Last 3 days",
 		"department":"Engineering - Software & QA"
 	},
 	{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"Senior software tester",
+				"job":"Test manager",
 				"location":"Pune",
-				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day",
+				"freshnessID":"filter-freshness-3",
+				"freshness":"Last 3 days",
 				"department":"Engineering - Software & QA"
 		},
 		
 		{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"Senior automation tester",
+				"job":"Test lead",
 				"location":"Pune",
-				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day",
+				"freshnessID":"filter-freshness-3",
+				"freshness":"Last 3 days",
 				"department":"Engineering - Software & QA"
 		},
 		{
 				"email": "sampadasdesai@gmail.com",
 				"password": "Sampada@4",
-				"job":"Senior Software Engineer - Test",
+				"job":"Senior Software test Engineer",
 				"location":"Pune",
-				"freshnessID":"filter-freshness-1",
-				"freshness":"Last 1 day",
+				"freshnessID":"filter-freshness-3",
+				"freshness":"Last 3 days",
 				"department":"Engineering - Software & QA"
 		}
 ]

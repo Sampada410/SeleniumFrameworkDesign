@@ -203,9 +203,15 @@ public class JobSearch extends AbstractComponents {
 									"maven",
 									"scrum master",
 									"rest api",
-									"KPI reports",
-									"Python", 
-									"Cucumber");
+									"kpi reports",
+									"python", 
+									"cucumber",
+									"automation",
+									"manual testing",
+									"data management",
+									"test execution",
+									"automation testing","communication skills", "testing framework", "leadership", "version control",
+									"debugging","etl", "database testing" );
 							
 							for(String defKeySkill: defKeySkills)
 							{
